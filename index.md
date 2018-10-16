@@ -1,37 +1,97 @@
-## Welcome to GitHub Pages
+## Hi, I am learning Pygame and I am horrible!
 
-You can use the [editor on GitHub](https://github.com/wardPlaced/LearningPygame/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+I just deleted a repo on GitHub because I realised it did not look that good, so yeah... anyways after fiddeling around I got something working and had mistaken it for the repo on Github and ???? you know I replaced instead of deleted the thing which made me so happy, and now I will have to do it again, and this time I will document it!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Lets go!
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The recourses that I used are here: 
+  [Scroll all the way down to putting it all together!!! (click)](https://www.pygame.org/docs/tut/MoveIt.html)
+  Note: While the stuff in the box is all done in the python [IDLE (whoa! I learned something today!!!)](https://docs.python.org/2/library/idle.html) we can still use most of whats there as a refference for our little project!
+  
 
 ```markdown
-Syntax highlighted code block
+screen = pygame.display.set_mode((640, 480))
+```
+Ok, first line we can probably integrate into the project, so we will do just that!
 
-# Header 1
-## Header 2
-### Header 3
+Create a new directory, in my case its going to be pygame and lets get cracking!
 
-- Bulleted
-- List
+```markdown
+# Open a terminal in the new directory and type
+git init 
+# use your texteditor of choice
+atom game.py 
+```
+Ok first things first!
 
-1. Numbered
-2. List
+```markdown
+# in game.py
+import sys
+import pygame
 
-**Bold** and _Italic_ and `Code` text
+pygame.init()
 
-[Link](url) and ![Image](src)
+while 1:
+  break
+
+pygame.quit()
+```
+Those two imports at the beginning can be usefull, especially pygame, but sys you sometimes need without even knowing, I highly suggest you import sys everywhere because of print, you can use print in any class and it will be displayed on the console which is very usefull when debugging, or just finding the mistake, whatever you call it!
+
+That brings us to the next topic, the structure of our code! Well, for our entrypoint of our little game, or for this little framework, its not an engine, allthough we are technically building engine tech, but I want to bridge the gap, you want to get a game finished after all!
+
+Also, I am way focused on getting a map going that is scrollable with your input! Because if we can cover these topics you will know how to do the rest!
+
+Add the line as I allready tolled you! We will keep the script nature of the entry point like this, no main needed. Also, there will be no need for a tilemap, we will work with single image files. 
+
+```markdown
+# in game.py
+import sys
+import pygame
+
+pygame.init()
+
+# this is the way pygame teaches you to use pygame.display, and I dont know any better!
+screen = pygame.display.set_mode((640, 480))
+
+while 1:
+  break
+
+pygame.quit()
+```
+phew ok, we will load in an image, like so
+
+```markdown
+bkgTile = pygame.image.load('bkgTile.png')
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Nothing to worry here, the newest version of pygame supports a lot more image data formats and it will not spazz out when coordinates are negative, keep this in mind when moving forward... or not, no worries!
 
-### Jekyll Themes
+Add the line to game.py like so, and create your background tile for your game!
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wardPlaced/LearningPygame/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```markdown
+# in game.py
+import sys
+import pygame
 
-### Support or Contact
+pygame.init()
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# this is the way pygame teaches to use pygame.display, and I dont know any better!
+screen = pygame.display.set_mode((640, 480))
+# you can add a folder for all the graphics ;)
+bkgTile = pygame.image.load('bkgTile.png')
+
+while 1:
+  break
+
+pygame.quit()
+```
+Heres a tip I found out by accident, if you dont specify any background color, which is not necessary at all then pygame will choose a color from your tile and just use that, and I think it uses the color which is more prevelant in the image, so yeah, maybe that might be helpfull in the future for other stuff, but not now! I havent tested it for other collors by the way, but it was a curious enough color that led me believing just that!
+
+## Lets just draw something tiled!
+
+Lets create a tiled background just from this image file alone, I suggest you make the size something between 32 and 64, can be larger can be smaller, but stick to one size, this will make the process infinately easier, but nobody is stopping you!
+
+### to be continued!
+
+
