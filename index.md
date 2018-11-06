@@ -92,6 +92,54 @@ Heres a tip I found out by accident, if you dont specify any background color, w
 
 Lets create a tiled background just from this image file alone, I suggest you make the size something between 32 and 64, can be larger can be smaller, but stick to one size, this will make the process infinately easier, but nobody is stopping you!
 
+What I mean is, if you choose the size of a single tile in the beginning you will not encounter any problems later on, we will be mainly hardcoding the game's structure and layout through code so having some predictible dimensions helps in that regard!
+
+But if I am really honest, we can probably make it so that we just have to change the size variable(s) to change the dimensions of a single tile, by adding a tile count for width and height of the ground tile displayed, which is just the number of tiles displayed in the positive x and y axis we then create a tiled image displayed on the screen!
+
+Ok so lets start!
+
+```markdown
+# in game.py
+import sys
+import pygame
+
+pygame.init()
+# we will organize our code a little bit before it gets too messed up
+# make sure your image size is the same as the size we use to calculate the position of the tile!!!
+size = 32
+width = 20 
+height = 30
+# when we want to move eveything else should move too, right?
+cameraMoveX = 0
+cameraMoveY = 0
+# we will need position variables that exist when the gameloop has completed one cycle, just to keep the structure simple you guys!
+x = 0
+y = 0
+
+# this is the way pygame teaches to use pygame.display, and I dont know any better!
+screen = pygame.display.set_mode((640, 480))
+# you can add a folder for all the graphics ;)
+bkgTile = pygame.image.load('bkgTile.png')
+
+while 1:
+  for x in width:
+    screen.blit(bkgTile, (size*x, size*y))
+  x = 0
+  y = y +1
+# call me crazy, the thing up there works!
+# its time for some event handling
+for event in pygame.event.get():
+  if event.type == pygame.QUIT:
+    sys.exit()
+
+pygame.quit()
+
+```
+dont compile for now, you wont get stuff done, you will just delay the point where there is just nothing more to add! Very important! You are wasting engergy on trying to get it to work when you dont even have anything yet, thats not making you happy, deal with it when the time is ripe!
+
+Tip #1: Allways code with refference, meaning use GOOGLE, or DOCKUMENTATION in every step and just dont care about compile errors, first we punch it in then we care about its internals! Especially starting out and with smaller tiny projects, it will make you more efficient! Who cares if you have to look stuff up! You are fine! Just stop! Get help!
+
+
 ### to be continued!
 
 
