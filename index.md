@@ -135,9 +135,9 @@ for event in pygame.event.get():
 pygame.quit()
 
 ```
-dont compile for now, you wont get stuff done, you will just delay the point where there is just nothing more to add! Very important! You are wasting engergy on trying to get it to work when you dont even have anything yet, thats not making you happy, deal with it when the time is ripe!
+Compiling is usefull, allways be compiling! But dont think you are god all of a sudden! Features need time to get done!
 
-Tip #1: Allways code with refference, meaning use GOOGLE, or DOCKUMENTATION in every step and just dont care about compile errors, first we punch it in then we care about its internals! Especially starting out and with smaller tiny projects, it will make you more efficient! Who cares if you have to look stuff up! You are fine! Just stop! Get help!
+Tip #1: Allways code with refference, meaning use GOOGLE, or DOCUMENTATION in every step, first we punch it in then we care about its internals! Especially starting out and with smaller tiny projects, it will make you more efficient! Who cares if you have to look stuff up! You are fine! What I mean is, put the code you found in as is, compile, see if it even works, then try to bend it your way!
 
 
 ### to be continued!
